@@ -1,0 +1,61 @@
+services:
+  mysql-db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.mysql
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_DATABASE: newsDB
+      MYSQL_ROOT_PASSWORD: mohammad
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck: 
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      retries: 5
+      timeout: 5s
+
+  backend:
+    build: 
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: backend_container
+    restart: always
+    volumes:
+      - backend_data:/app/uploads
+    depends_on:
+       mysql-db:
+         condition: service_healthy
+    environment:
+       DB_HOST: mysql-db
+       DB_USER: root
+       DB_PASSWORD: mohammad
+       DB_NAME: newsDB
+    ports:
+      - "4000:4000"
+  
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: frontend_container
+    restart: always
+    environment:
+       API_URL: http://backend:4000
+    volumes:
+       - ./front-end:/usr/local/apache2/htdocs
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+
+
+
+volumes:
+  mysql_data:
+  backend_data:
+

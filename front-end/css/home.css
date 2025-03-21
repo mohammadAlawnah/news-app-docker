@@ -1,0 +1,258 @@
+
+
+
+
+
+
+.articles{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-image{
+    width: 24rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image img{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .3s ease-in-out;
+    -webkit-transition:;
+    -moz-transition:;
+    -ms-transition:;
+    -o-transition:;
+}
+
+.card-title h3{
+    font-size: 22px;
+    font-weight: 800px;
+    line-height: 1.6em;
+    text-wrap: wrap;
+    width: 22rem;
+    color: #e89058;
+}
+
+.card-title h3:hover{
+    cursor: pointer;
+    color: #df7822;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.articles img:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.article-type{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 3px;
+    background-color: #df7822;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.articles-news{
+    margin-top: 3rem;
+
+}
+
+  /* Our articles & news Section Design End  */
+
+
+
+
+  @media screen and   (max-width: 576px) {
+
+    .header-text{
+        font-size: 25px;
+    }
+
+    .contact-btn{
+        margin-left: 1rem;
+    }
+
+
+    .cat-image{
+        width: 12rem;
+    }
+    .articles-news{
+        margin-top: 2rem;
+    }
+    header{
+        min-height: 70vh;
+    }
+
+    .cat-text{
+        font-size: 15px;
+        margin-top: 7rem;
+    }
+
+    .cat{
+        margin-top: -5rem;
+    }
+
+    .card-image{
+        width: 20rem;    
+    }
+
+    .articles{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .location{
+        flex-wrap: wrap;
+    }
+
+    .map iframe{
+        width : 16rem;
+        height : 24rem;
+    }
+
+    .map{
+        margin: auto;
+    }
+
+    .fact-cat img{
+        width: 100%;
+    }
+
+    .fact-description{
+        width: fit-content;
+    }
+
+    .card-title h3{
+        width: 19rem;
+    }
+
+   
+}
+
+
+
+@media screen and (min-width:577px) and (max-width: 768px) {
+    .header-text{
+        font-size: 50px;
+    }
+
+    .contact-btn{
+        margin-left: 2rem;
+    }
+
+    .card-image{
+        width: 22rem;    
+    }
+
+    .articles{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .location{
+        flex-wrap: wrap;
+    }
+
+    .map iframe{
+        width : 30rem;
+    }
+
+    .map{
+        margin: auto;
+    }
+
+    .fact-cat img{
+        width: 100%;
+    }
+
+    .fact-description{
+        width: fit-content;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width: 992px) {
+
+    .cat-image{
+        width: 16rem;
+    }
+
+    .card-image{
+        width: 18rem;    
+    }
+
+    .articles{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .location{
+        flex-wrap: wrap;
+    }
+
+    .map iframe{
+        width : 30rem;
+    }
+
+    .map{
+        margin: auto;
+    }
+
+    .fact-cat img{
+        width: 100%;
+    }
+
+    .fact-description{
+        width: fit-content;
+    }
+ 
+}
+
+@media screen and  (min-width: 993px) and (max-width : 1199) {
+
+    .card-image{
+        width: 18rem;    
+    }
+
+    .articles{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card-title h3{
+        width: 8rem;
+    }
+}
+
+
+@media screen and  (max-width: 1300px) {
+
+    .card-title h3{
+        width: 16rem;
+    }
+
+    .card-image{
+        width: 15rem;
+    }
+
+ 
+}
